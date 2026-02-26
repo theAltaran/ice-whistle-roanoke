@@ -29,7 +29,7 @@ export default function Home() {
             </div>
           </div>
           <p className="text-center text-primary-300 mt-4">
-            Video by <span className="text-primary-200 font-semibold">@roanokeicewhistle</span> on Instagram
+            Video by <span className="text-primary-200 font-semibold">New York Immigration Coalition</span> on Instagram
           </p>
         </div>
       </section>
