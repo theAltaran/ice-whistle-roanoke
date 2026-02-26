@@ -35,10 +35,19 @@ export default function Donate() {
       <div className="bg-gradient-to-r from-primary-700 to-primary-800 rounded-2xl p-8 border border-primary-500/50 text-center mb-8">
         <h2 className="text-2xl font-bold text-white mb-4">How to Donate</h2>
         <p className="text-primary-100 mb-6">
-          We accept donations through various methods. Contact us to learn how to contribute.
+          Your support helps protect immigrant families in Roanoke. Together, we turn silence into action. Solidarity forever.
         </p>
-        <div className="text-primary-200">
-          <p className="mb-2">📧 Email: <a href="mailto:donate@icewhistleroanoke.org" className="text-primary-200 underline hover:text-white">donate@icewhistleroanoke.org</a></p>
+        <a 
+          href="https://www.paypal.com/donate/?hosted_button_id=JZR99LRVENVBY"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-8 py-4 bg-primary-500 hover:bg-primary-400 text-white rounded-lg transition-colors text-lg font-semibold"
+        >
+          Donate with PayPal
+        </a>
+        <div className="mt-6 text-primary-200">
+          <p className="mb-2">Or contact us directly:</p>
+          <p>Email: <a href="mailto:donate@icewhistleroanoke.org" className="text-primary-200 underline hover:text-white">donate@icewhistleroanoke.org</a></p>
         </div>
       </div>
 
