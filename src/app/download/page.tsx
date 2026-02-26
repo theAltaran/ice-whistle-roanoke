@@ -9,7 +9,7 @@ export default function Download() {
 
       <div className="bg-primary-900/50 rounded-2xl p-8 border border-primary-700/50 mb-8">
         <p className="text-xl text-primary-100 leading-relaxed mb-6">
-          You can make your own Ice Whistle at home! We provide both 3D print files and printable templates for those without 3D printers.
+          You can make your own Ice Whistle at home with a 3D printer!
         </p>
         
         <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30">
@@ -60,35 +60,6 @@ export default function Download() {
             </p>
           </div>
         </div>
-      </div>
-
-      {/* Printable Template Section */}
-      <div className="bg-gradient-to-r from-primary-800 to-primary-900 rounded-2xl p-8 border border-primary-600/50 mb-8">
-        <div className="flex items-center mb-6">
-          <span className="text-4xl mr-4">📄</span>
-          <h2 className="text-3xl font-bold text-white">Paper Template</h2>
-        </div>
-        
-        <p className="text-primary-100 mb-6">
-          Don't have a 3D printer? You can still make a functional whistle using cardstock and simple tools!
-        </p>
-        
-        <div className="bg-primary-900/50 rounded-xl p-6 mb-6">
-          <h3 className="text-xl font-semibold text-white mb-3">What You'll Need</h3>
-          <ul className="space-y-2 text-primary-200">
-            <li>• Cardstock paper (thicker = louder whistle)</li>
-            <li>• Scissors</li>
-            <li>• Glue (hot glue works best)</li>
-            <li>• A straw or tube</li>
-          </ul>
-        </div>
-        
-        <button 
-          className="w-full px-6 py-4 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors text-lg font-semibold cursor-not-allowed opacity-50"
-          disabled
-        >
-          Download Template (Coming Soon)
-        </button>
       </div>
 
       {/* Purchase Option */}
