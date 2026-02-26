@@ -4,12 +4,12 @@ import nodemailer from 'nodemailer'
 export async function POST(request: Request) {
   try {
     const body = await request.json()
-    const { name, quantity, deliveryMethod, color, notes } = body
+    const { name, quantity, color, notes } = body
 
     // Validate required fields
-    if (!name || !quantity || !deliveryMethod) {
+    if (!name || !quantity || !notes) {
       return NextResponse.json(
-        { error: 'Name, quantity, and delivery method are required' },
+        { error: 'Name, quantity, and contact info are required' },
         { status: 400 }
       )
     }
@@ -50,9 +50,8 @@ New Ice Whistle Request:
 
 Name: ${name}
 Quantity Needed: ${quantity}
-Delivery Method: ${deliveryMethod}
 Preferred Color: ${color || 'None specified'}
-Additional Notes: ${notes || 'None'}
+Contact Info & How to Get Whistles: ${notes}
 
 ---
 Sent from icewhistleroanoke.org
@@ -61,9 +60,8 @@ Sent from icewhistleroanoke.org
 <h2>New Ice Whistle Request</h2>
 <p><strong>Name:</strong> ${name}</p>
 <p><strong>Quantity Needed:</strong> ${quantity}</p>
-<p><strong>Delivery Method:</strong> ${deliveryMethod}</p>
 <p><strong>Preferred Color:</strong> ${color || 'None specified'}</p>
-<p><strong>Additional Notes:</strong> ${notes || 'None'}</p>
+<p><strong>Contact Info & How to Get Whistles:</strong> ${notes}</p>
 <hr>
 <p><em>Sent from icewhistleroanoke.org</em></p>
       `,

@@ -102,17 +102,15 @@ export default function Download() {
           </div>
           
           <div>
-            <label htmlFor="deliveryMethod" className="block text-primary-200 mb-1">Pickup or Delivery? *</label>
-            <select 
-              id="deliveryMethod" 
-              name="deliveryMethod" 
+            <label htmlFor="notes" className="block text-primary-200 mb-1">Contact Info & How to Get Whistles *</label>
+            <textarea 
+              id="notes" 
+              name="notes" 
+              rows={4}
+              placeholder="Please provide your email or phone number. Let us know if you would like pickup, delivery, or shipping. Note: Shipping requires a donation to cover costs."
               required
               className="w-full px-4 py-2 bg-primary-800 border border-primary-600 rounded-lg text-white focus:outline-none focus:border-primary-400"
-            >
-              <option value="">Select an option</option>
-              <option value="Pickup">Pickup</option>
-              <option value="Delivery">Delivery</option>
-            </select>
+            />
           </div>
           
           <div>
@@ -125,16 +123,6 @@ export default function Download() {
               className="w-full px-4 py-2 bg-primary-800 border border-primary-600 rounded-lg text-white focus:outline-none focus:border-primary-400"
             />
             <p className="text-primary-400 text-sm mt-1">Note: Color choices are only available if I have that filament in stock at the time.</p>
-          </div>
-          
-          <div>
-            <label htmlFor="notes" className="block text-primary-200 mb-1">Additional Notes (optional)</label>
-            <textarea 
-              id="notes" 
-              name="notes" 
-              rows={3}
-              className="w-full px-4 py-2 bg-primary-800 border border-primary-600 rounded-lg text-white focus:outline-none focus:border-primary-400"
-            />
           </div>
           
           <button 
@@ -156,7 +144,6 @@ export default function Download() {
           const data = {
             name: formData.get('name'),
             quantity: formData.get('quantity'),
-            deliveryMethod: formData.get('deliveryMethod'),
             color: formData.get('color'),
             notes: formData.get('notes')
           };
