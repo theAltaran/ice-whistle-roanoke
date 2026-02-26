@@ -52,7 +52,7 @@ export default function RootLayout({
         </main>
         <footer className="bg-primary-950/80 border-t border-primary-800 py-6 mt-12">
           <div className="max-w-6xl mx-auto px-4 text-center text-primary-400">
-            <p>© 2024 Ice Whistle Roanoke. Solidarity Forever.</p>
+            <p>© {new Date().getFullYear()} Ice Whistle Roanoke. Solidarity Forever.</p>
           </div>
         </footer>
       </body>
