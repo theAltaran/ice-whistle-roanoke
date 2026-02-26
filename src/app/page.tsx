@@ -13,33 +13,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* Video Section */}
-      <section className="mb-16">
-        <div className="bg-primary-900/50 rounded-2xl p-8 border border-primary-700/50 backdrop-blur-sm">
-          <h2 className="text-3xl font-bold text-white mb-6 text-center">See How It Works</h2>
-          <div className="flex justify-center">
-            <a 
-              href="https://www.instagram.com/reels/DRVYvFeifho/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative w-full max-w-md aspect-[9/16] rounded-xl overflow-hidden shadow-2xl shadow-primary-900/50 bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center hover:scale-[1.02] transition-transform"
-            >
-              <div className="text-center p-6">
-                <div className="text-6xl mb-4">▶️</div>
-                <p className="text-white font-semibold text-lg">Watch Video</p>
-                <p className="text-primary-200 text-sm mt-2">Click to open on Instagram</p>
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 bg-black/50 rounded-lg p-3 text-center">
-                <p className="text-white text-sm">📹 ICE Whistle Demo</p>
-              </div>
-            </a>
-          </div>
-          <p className="text-center text-primary-300 mt-4">
-            Video by <span className="text-primary-200 font-semibold">New York Immigration Coalition</span> on Instagram
-          </p>
-        </div>
-      </section>
-
       {/* About Section */}
       <section className="mb-16">
         <div className="bg-primary-900/30 rounded-2xl p-8 border border-primary-700/30">
@@ -101,6 +74,22 @@ export default function Home() {
                     Rally witnesses to document
                   </p>
                 </div>
+              </div>
+
+              {/* Video Link - Smaller, below How to Use */}
+              <div className="mt-8 pt-6 border-t border-primary-600/30 text-center">
+                <a 
+                  href="https://www.instagram.com/reels/DRVYvFeifho/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary-600 hover:bg-primary-500 rounded-lg text-white transition-colors"
+                >
+                  <span>▶️</span>
+                  <span>Watch Video Demo</span>
+                </a>
+                <p className="text-primary-300 text-sm mt-2">
+                  Video by New York Immigration Coalition
+                </p>
               </div>
             </div>
           </div>
