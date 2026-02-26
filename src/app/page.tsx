@@ -18,7 +18,7 @@ export default function Home() {
         <div className="bg-primary-900/50 rounded-2xl p-8 border border-primary-700/50 backdrop-blur-sm">
           <h2 className="text-3xl font-bold text-white mb-6 text-center">See How It Works</h2>
           <div className="flex justify-center">
-            <div className="w-full max-w-2xl aspect-video rounded-xl overflow-hidden shadow-2xl shadow-primary-900/50">
+            <div className="w-full max-w-md aspect-[9/16] rounded-xl overflow-hidden shadow-2xl shadow-primary-900/50">
               <iframe
                 className="w-full h-full"
                 src="https://www.instagram.com/reels/DRVYvFeifho/embed"
