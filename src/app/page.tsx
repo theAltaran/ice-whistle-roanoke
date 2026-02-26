@@ -70,6 +70,33 @@ export default function Home() {
                 </p>
               </div>
             </div>
+
+            {/* How to Use Your Whistle - Prominent Section */}
+            <div className="mt-12 bg-gradient-to-r from-primary-700/50 to-primary-800/50 rounded-2xl p-8 border-2 border-primary-500/50">
+              <h3 className="text-2xl font-bold text-white mb-6 text-center">📢 How to Use Your Whistle</h3>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="text-center">
+                  <div className="bg-primary-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🔔🔔🔔</span>
+                  </div>
+                  <h4 className="text-xl font-bold text-white mb-2">3 Short Blasts</h4>
+                  <p className="text-primary-100 text-lg">
+                    <strong>ICE is nearby!</strong><br/>
+                    Alert your neighbors to get to safety
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-red-600 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">📢</span>
+                  </div>
+                  <h4 className="text-xl font-bold text-white mb-2">Long Sustained Blast</h4>
+                  <p className="text-primary-100 text-lg">
+                    <strong>Code Red - Detainment in progress!</strong><br/>
+                    Rally witnesses to document
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
