@@ -12,6 +12,7 @@ To enable the whistle request form to send emails, add these environment variabl
 | `SMTP_PORT` | Email server port | `587` (or `465` for SSL) |
 | `SMTP_USER` | Your email address/username | `your-email@gmail.com` |
 | `SMTP_PASS` | Your email password or app password | `xxxx xxxx xxxx xxxx` |
+| `EMAIL_FROM` | (Optional) From address in emails. Defaults to SMTP_USER | `Ice Whistle Roanoke <your-email@gmail.com>` |
 | `EMAIL_TO` | (Optional) Where to send requests. Defaults to icewhistleroanoke@gmail.com | `your-email@gmail.com` |
 
 ### Gmail Setup

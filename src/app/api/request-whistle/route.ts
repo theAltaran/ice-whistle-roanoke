@@ -19,6 +19,7 @@ export async function POST(request: Request) {
     const SMTP_PORT = process.env.SMTP_PORT
     const SMTP_USER = process.env.SMTP_USER
     const SMTP_PASS = process.env.SMTP_PASS
+    const EMAIL_FROM = process.env.EMAIL_FROM || SMTP_USER
     const EMAIL_TO = process.env.EMAIL_TO || 'icewhistleroanoke@gmail.com'
 
     if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
@@ -41,7 +42,7 @@ export async function POST(request: Request) {
 
     // Email content
     const mailOptions = {
-      from: SMTP_USER,
+      from: EMAIL_FROM,
       to: EMAIL_TO,
       subject: `Ice Whistle Request from ${name}`,
       text: `
