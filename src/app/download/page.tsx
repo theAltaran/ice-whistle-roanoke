@@ -1,0 +1,120 @@
+import Link from 'next/link'
+
+export default function Download() {
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 text-center">
+        Download & Print Your Ice Whistle
+      </h1>
+
+      <div className="bg-primary-900/50 rounded-2xl p-8 border border-primary-700/50 mb-8">
+        <p className="text-xl text-primary-100 leading-relaxed mb-6">
+          You can make your own Ice Whistle at home! We provide both 3D print files and printable templates for those without 3D printers.
+        </p>
+        
+        <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30">
+          <h3 className="text-2xl font-bold text-white mb-4">⚠️ Important Safety Notes</h3>
+          <ul className="space-y-2 text-primary-200">
+            <li>• Only print or use whistles for defensive, community safety purposes</li>
+            <li>• Never use whistles to harass or intimidate others</li>
+            <li>• Learn the proper signals: 3 short blasts = ICE nearby, long sustained blast = detention in progress</li>
+            <li>• Always prioritize your safety and the safety of others</li>
+          </ul>
+        </div>
+      </div>
+
+      {/* 3D Print Section */}
+      <div className="bg-gradient-to-r from-primary-700 to-primary-800 rounded-2xl p-8 border border-primary-500/50 mb-8">
+        <div className="flex items-center mb-6">
+          <span className="text-4xl mr-4">🖨️</span>
+          <h2 className="text-3xl font-bold text-white">3D Printed Whistles</h2>
+        </div>
+        
+        <div className="space-y-6">
+          <div className="bg-primary-900/50 rounded-xl p-6">
+            <h3 className="text-xl font-semibold text-white mb-3">Recommended Settings</h3>
+            <ul className="space-y-2 text-primary-200">
+              <li>• <strong>Material:</strong> PLA or PETG (durable, non-toxic)</li>
+              <li>• <strong>Layer Height:</strong> 0.2mm or lower for better air seal</li>
+              <li>• <strong>Infill:</strong> 100% for solid whistle</li>
+              <li>• <strong>No Supports:</strong> Design should be support-free</li>
+            </ul>
+          </div>
+          
+          <div className="bg-primary-900/50 rounded-xl p-6">
+            <h3 className="text-xl font-semibold text-white mb-3">Download Files</h3>
+            <p className="text-primary-200 mb-4">
+              STL and OBJ files coming soon. Check back for download links.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button 
+                className="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors cursor-not-allowed opacity-50"
+                disabled
+              >
+                STL File (Coming Soon)
+              </button>
+              <button 
+                className="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors cursor-not-allowed opacity-50"
+                disabled
+              >
+                OBJ File (Coming Soon)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Printable Template Section */}
+      <div className="bg-gradient-to-r from-primary-800 to-primary-900 rounded-2xl p-8 border border-primary-600/50 mb-8">
+        <div className="flex items-center mb-6">
+          <span className="text-4xl mr-4">📄</span>
+          <h2 className="text-3xl font-bold text-white">Paper Template</h2>
+        </div>
+        
+        <p className="text-primary-100 mb-6">
+          Don't have a 3D printer? You can still make a functional whistle using cardstock and simple tools!
+        </p>
+        
+        <div className="bg-primary-900/50 rounded-xl p-6 mb-6">
+          <h3 className="text-xl font-semibold text-white mb-3">What You'll Need</h3>
+          <ul className="space-y-2 text-primary-200">
+            <li>• Cardstock paper (thicker = louder whistle)</li>
+            <li>• Scissors</li>
+            <li>• Glue (hot glue works best)</li>
+            <li>• A straw or tube</li>
+          </ul>
+        </div>
+        
+        <button 
+          className="w-full px-6 py-4 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors text-lg font-semibold cursor-not-allowed opacity-50"
+          disabled
+        >
+          Download Template (Coming Soon)
+        </button>
+      </div>
+
+      {/* Purchase Option */}
+      <div className="bg-primary-900/30 rounded-2xl p-8 border border-primary-700/30">
+        <h3 className="text-2xl font-bold text-white mb-4">Pre-Made Whistles Available</h3>
+        <p className="text-primary-100 mb-4">
+          If you can't print or make your own, we have pre-made whistles available for purchase or free distribution in the Roanoke area.
+        </p>
+        <Link 
+          href="/donate"
+          className="inline-block px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors"
+        >
+          Request a Whistle →
+        </Link>
+      </div>
+
+      <div className="mt-8 text-center">
+        <Link 
+          href="/"
+          className="inline-block px-6 py-3 bg-primary-700 hover:bg-primary-600 text-white rounded-lg transition-colors"
+        >
+          ← Back to Home
+        </Link>
+      </div>
+    </div>
+  )
+}
