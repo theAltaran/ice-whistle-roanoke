@@ -54,6 +54,14 @@ export default function Download() {
               >
                 📥 Download STL File
               </a>
+              <a 
+                href="https://makerworld.com/en/models/1986369-ice-out-whistle-keychain-open-license-support-free"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary-700 hover:bg-primary-600 text-white rounded-lg transition-colors"
+              >
+                🔗 Original STL Location
+              </a>
             </div>
             <p className="text-primary-300 text-sm mt-4">
               Original design by <a href="https://makerworld.com/en/@3LittleBirds3D" target="_blank" rel="noopener noreferrer" className="text-primary-200 underline hover:text-white">ThreeLittleBirds 3D</a> on MakerWorld
