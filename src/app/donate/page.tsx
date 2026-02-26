@@ -51,7 +51,7 @@ export default function Donate() {
           </li>
           <li className="flex items-start">
             <span className="text-primary-400 mr-2">✓</span>
-            <span>Traditional whistle purchases for communities without 3D printer access</span>
+            <span>Traditional whistles for communities without 3D printer access</span>
           </li>
           <li className="flex items-start">
             <span className="text-primary-400 mr-2">✓</span>

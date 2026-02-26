@@ -74,13 +74,13 @@ export default function Download() {
       <div className="bg-primary-900/30 rounded-2xl p-8 border border-primary-700/30">
         <h3 className="text-2xl font-bold text-white mb-4">Pre-Made Whistles Available</h3>
         <p className="text-primary-100 mb-4">
-          If you can't print or make your own, we have pre-made whistles available for purchase or free distribution in the Roanoke area.
+          If you can't print your own, we have pre-made whistles available for free distribution in the Roanoke area.
         </p>
         <Link 
           href="/donate"
           className="inline-block px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors"
         >
-          Request a Whistle →
+          Get a Free Whistle →
         </Link>
       </div>
 
