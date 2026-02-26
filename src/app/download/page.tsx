@@ -44,22 +44,20 @@ export default function Download() {
           <div className="bg-primary-900/50 rounded-xl p-6">
             <h3 className="text-xl font-semibold text-white mb-3">Download Files</h3>
             <p className="text-primary-200 mb-4">
-              STL and OBJ files coming soon. Check back for download links.
+              Download the STL file to 3D print your own Ice Whistle.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <button 
-                className="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors cursor-not-allowed opacity-50"
-                disabled
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="https://roanoke-ice-whistle.b-cdn.net/PentagonWhistleV2.stl"
+                download
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors"
               >
-                STL File (Coming Soon)
-              </button>
-              <button 
-                className="px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors cursor-not-allowed opacity-50"
-                disabled
-              >
-                OBJ File (Coming Soon)
-              </button>
+                📥 Download STL File
+              </a>
             </div>
+            <p className="text-primary-300 text-sm mt-4">
+              Original design by <a href="https://makerworld.com/en/models/1986369-ice-out-whistle-keychain-open-license-support-free?from=search#profileId-2438628" target="_blank" rel="noopener noreferrer" className="text-primary-200 underline hover:text-white">MakerWorld Designer</a>
+            </p>
           </div>
         </div>
       </div>
