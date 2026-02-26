@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Link from 'next/link'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script defer data-domain="ice-whistle-roanoke.vercel.app" src="https://plausible.altaran.us/js/script.js" />
+      </head>
       <body className={inter.className}>
         <nav className="bg-primary-950/80 backdrop-blur-md border-b border-primary-800 sticky top-0 z-50">
           <div className="max-w-6xl mx-auto px-4">
