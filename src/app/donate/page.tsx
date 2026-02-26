@@ -15,19 +15,19 @@ export default function Donate() {
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$10</span>
-            <p className="text-primary-200">Provides materials for 5 whistles</p>
+            <p className="text-primary-200">Provides filament for ~50 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$25</span>
-            <p className="text-primary-200">Provides materials for 15 whistles</p>
+            <p className="text-primary-200">Provides filament for ~150 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$50</span>
-            <p className="text-primary-200">Provides materials for 30 whistles</p>
+            <p className="text-primary-200">Provides filament for ~300 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$100</span>
-            <p className="text-primary-200">Provides materials for 60 whistles + educational materials</p>
+            <p className="text-primary-200">Provides filament for ~600 whistles</p>
           </div>
         </div>
       </div>
@@ -56,15 +56,15 @@ export default function Donate() {
         <ul className="space-y-3 text-primary-200">
           <li className="flex items-start">
             <span className="text-primary-400 mr-2">✓</span>
-            <span>Materials for 3D printed whistles (PLA filament, equipment maintenance)</span>
+            <span>PLA filament for 3D printed whistles ($10-15 per roll, approx 50 whistles per roll)</span>
           </li>
           <li className="flex items-start">
             <span className="text-primary-400 mr-2">✓</span>
-            <span>Traditional whistles for communities without 3D printer access</span>
+            <span>Equipment maintenance and supplies</span>
           </li>
           <li className="flex items-start">
             <span className="text-primary-400 mr-2">✓</span>
-            <span>Educational materials on how to use the whistles safely and effectively</span>
+            <span>Second 3D printer ($300 needed) to increase production from 50 to 100+ whistles per day</span>
           </li>
           <li className="flex items-start">
             <span className="text-primary-400 mr-2">✓</span>
