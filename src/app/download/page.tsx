@@ -56,7 +56,7 @@ export default function Download() {
               </a>
             </div>
             <p className="text-primary-300 text-sm mt-4">
-              Original design by <a href="https://makerworld.com/en/models/1986369-ice-out-whistle-keychain-open-license-support-free?from=search#profileId-2438628" target="_blank" rel="noopener noreferrer" className="text-primary-200 underline hover:text-white">MakerWorld Designer</a>
+              Original design by <a href="https://makerworld.com/en/@3LittleBirds3D" target="_blank" rel="noopener noreferrer" className="text-primary-200 underline hover:text-white">ThreeLittleBirds 3D</a> on MakerWorld
             </p>
           </div>
         </div>
