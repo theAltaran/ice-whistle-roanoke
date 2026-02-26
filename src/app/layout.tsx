@@ -50,7 +50,20 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
-        <footer className="bg-primary-950/80 border-t border-primary-800 py-6 mt-12">
+        
+        {/* Contact Info */}
+        <div className="bg-primary-900/50 border-t border-primary-800 py-8">
+          <div className="max-w-6xl mx-auto px-4 text-center">
+            <p className="text-primary-300">
+              Questions? Contact us at{' '}
+              <a href="mailto:icewhistleroanoke@gmail.com" className="text-primary-200 underline hover:text-white">
+                icewhistleroanoke@gmail.com
+              </a>
+            </p>
+          </div>
+        </div>
+        
+        <footer className="bg-primary-950/80 border-t border-primary-800 py-6">
           <div className="max-w-6xl mx-auto px-4 text-center text-primary-400">
             <p>© {new Date().getFullYear()} Ice Whistle Roanoke. Solidarity Forever.</p>
             <a 

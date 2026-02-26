@@ -45,10 +45,6 @@ export default function Donate() {
         >
           Donate with PayPal
         </a>
-        <div className="mt-6 text-primary-200">
-          <p className="mb-2">Or contact us directly:</p>
-          <p>Email: <a href="mailto:icewhistleroanoke@gmail.com" className="text-primary-200 underline hover:text-white">icewhistleroanoke@gmail.com</a></p>
-        </div>
       </div>
 
       <div className="bg-primary-900/30 rounded-2xl p-8 border border-primary-700/30">
