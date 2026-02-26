@@ -77,17 +77,121 @@ export default function Download() {
           If you cannot print your own, request free pre-made whistles. I will get back to you regarding availability and to arrange pickup or delivery.
         </p>
         
-        <a 
-          href="mailto:icewhistleroanoke@gmail.com?subject=Ice Whistle Request&body=Name:%20%0A%0AHow many whistles do you need?%20%0A%0APickup or delivery?%20%0A%0APreferred color (if available):%20%0A%0AAdditional notes:%20"
-          className="inline-block px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors"
-        >
-          Request Whistles →
-        </a>
+        <form id="whistleRequestForm" className="space-y-4">
+          <div>
+            <label htmlFor="name" className="block text-primary-200 mb-1">Your Name *</label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              required
+              className="w-full px-4 py-2 bg-primary-800 border border-primary-600 rounded-lg text-white focus:outline-none focus:border-primary-400"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="quantity" className="block text-primary-200 mb-1">How many whistles do you need? *</label>
+            <input 
+              type="number" 
+              id="quantity" 
+              name="quantity" 
+              min="1" 
+              required
+              className="w-full px-4 py-2 bg-primary-800 border border-primary-600 rounded-lg text-white focus:outline-none focus:border-primary-400"
+            />
+          </div>
+          
+          <div>
+            <label htmlFor="deliveryMethod" className="block text-primary-200 mb-1">Pickup or Delivery? *</label>
+            <select 
+              id="deliveryMethod" 
+              name="deliveryMethod" 
+              required
+              className="w-full px-4 py-2 bg-primary-800 border border-primary-600 rounded-lg text-white focus:outline-none focus:border-primary-400"
+            >
+              <option value="">Select an option</option>
+              <option value="Pickup">Pickup</option>
+              <option value="Delivery">Delivery</option>
+            </select>
+          </div>
+          
+          <div>
+            <label htmlFor="color" className="block text-primary-200 mb-1">Preferred Color (optional)</label>
+            <input 
+              type="text" 
+              id="color" 
+              name="color" 
+              placeholder="e.g., Blue, Purple, White"
+              className="w-full px-4 py-2 bg-primary-800 border border-primary-600 rounded-lg text-white focus:outline-none focus:border-primary-400"
+            />
+            <p className="text-primary-400 text-sm mt-1">Note: Color choices are only available if I have that filament in stock at the time.</p>
+          </div>
+          
+          <div>
+            <label htmlFor="notes" className="block text-primary-200 mb-1">Additional Notes (optional)</label>
+            <textarea 
+              id="notes" 
+              name="notes" 
+              rows={3}
+              className="w-full px-4 py-2 bg-primary-800 border border-primary-600 rounded-lg text-white focus:outline-none focus:border-primary-400"
+            />
+          </div>
+          
+          <button 
+            type="submit"
+            className="w-full px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors font-semibold"
+          >
+            Submit Request
+          </button>
+        </form>
         
-        <p className="text-primary-400 text-sm mt-4">
-          Note: Color choices are only available if I have that filament in stock at the time.
-        </p>
+        <p id="formStatus" className="mt-4 text-center text-primary-200 hidden"></p>
       </div>
+
+      <script dangerouslySetInnerHTML={{__html: `
+        document.getElementById('whistleRequestForm').addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const form = e.target;
+          const formData = new FormData(form);
+          const data = {
+            name: formData.get('name'),
+            quantity: formData.get('quantity'),
+            deliveryMethod: formData.get('deliveryMethod'),
+            color: formData.get('color'),
+            notes: formData.get('notes')
+          };
+          const statusEl = document.getElementById('formStatus');
+          const submitBtn = form.querySelector('button[type="submit"]');
+          
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Submitting...';
+          statusEl.classList.add('hidden');
+          
+          try {
+            const response = await fetch('/api/request-whistle', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(data)
+            });
+            
+            const result = await response.json();
+            
+            if (response.ok) {
+              statusEl.textContent = 'Request submitted successfully! I will get back to you soon.';
+              statusEl.className = 'mt-4 text-center text-green-400';
+              form.reset();
+            } else {
+              throw new Error(result.error || 'Failed to submit');
+            }
+          } catch (error) {
+            statusEl.textContent = 'Failed to submit request. Please try again or email directly.';
+            statusEl.className = 'mt-4 text-center text-red-400';
+          } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit Request';
+          }
+        });
+      `}} />
 
       <div className="mt-8 text-center">
         <Link 

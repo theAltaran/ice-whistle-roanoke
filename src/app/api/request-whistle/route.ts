@@ -1,0 +1,82 @@
+import { NextResponse } from 'next/server'
+import nodemailer from 'nodemailer'
+
+export async function POST(request: Request) {
+  try {
+    const body = await request.json()
+    const { name, quantity, deliveryMethod, color, notes } = body
+
+    // Validate required fields
+    if (!name || !quantity || !deliveryMethod) {
+      return NextResponse.json(
+        { error: 'Name, quantity, and delivery method are required' },
+        { status: 400 }
+      )
+    }
+
+    // Get email configuration from environment variables
+    const SMTP_HOST = process.env.SMTP_HOST
+    const SMTP_PORT = process.env.SMTP_PORT
+    const SMTP_USER = process.env.SMTP_USER
+    const SMTP_PASS = process.env.SMTP_PASS
+    const EMAIL_TO = process.env.EMAIL_TO || 'icewhistleroanoke@gmail.com'
+
+    if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+      return NextResponse.json(
+        { error: 'Email server not configured' },
+        { status: 500 }
+      )
+    }
+
+    // Create transporter
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: parseInt(SMTP_PORT || '587'),
+      secure: SMTP_PORT === '465',
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
+      },
+    })
+
+    // Email content
+    const mailOptions = {
+      from: SMTP_USER,
+      to: EMAIL_TO,
+      subject: `Ice Whistle Request from ${name}`,
+      text: `
+New Ice Whistle Request:
+
+Name: ${name}
+Quantity Needed: ${quantity}
+Delivery Method: ${deliveryMethod}
+Preferred Color: ${color || 'None specified'}
+Additional Notes: ${notes || 'None'}
+
+---
+Sent from icewhistleroanoke.org
+      `,
+      html: `
+<h2>New Ice Whistle Request</h2>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>Quantity Needed:</strong> ${quantity}</p>
+<p><strong>Delivery Method:</strong> ${deliveryMethod}</p>
+<p><strong>Preferred Color:</strong> ${color || 'None specified'}</p>
+<p><strong>Additional Notes:</strong> ${notes || 'None'}</p>
+<hr>
+<p><em>Sent from icewhistleroanoke.org</em></p>
+      `,
+    }
+
+    // Send email
+    await transporter.sendMail(mailOptions)
+
+    return NextResponse.json({ success: true, message: 'Request submitted successfully' })
+  } catch (error) {
+    console.error('Error sending email:', error)
+    return NextResponse.json(
+      { error: 'Failed to send request' },
+      { status: 500 }
+    )
+  }
+}
