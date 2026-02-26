@@ -15,19 +15,19 @@ export default function Donate() {
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$10</span>
-            <p className="text-primary-200">Provides filament for ~150 whistles</p>
+            <p className="text-primary-200">Provides filament for ~125 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$25</span>
-            <p className="text-primary-200">Provides filament for ~375 whistles</p>
+            <p className="text-primary-200">Provides filament for ~300 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$50</span>
-            <p className="text-primary-200">Provides filament for ~750 whistles</p>
+            <p className="text-primary-200">Provides filament for ~625 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$100</span>
-            <p className="text-primary-200">Provides filament for ~1,500 whistles</p>
+            <p className="text-primary-200">Provides filament for ~1,250 whistles</p>
           </div>
         </div>
       </div>
@@ -52,7 +52,7 @@ export default function Donate() {
         <ul className="space-y-3 text-primary-200">
           <li className="flex items-start">
             <span className="text-primary-400 mr-2">✓</span>
-            <span>PLA filament for 3D printed whistles (1kg spool prints approx 150 whistles)</span>
+            <span>PLA filament for 3D printed whistles (1kg spool prints approx 125 whistles)</span>
           </li>
           <li className="flex items-start">
             <span className="text-primary-400 mr-2">✓</span>

@@ -70,18 +70,23 @@ export default function Download() {
         </div>
       </div>
 
-      {/* Purchase Option */}
+      {/* Request Whistles Form */}
       <div className="bg-primary-900/30 rounded-2xl p-8 border border-primary-700/30">
-        <h3 className="text-2xl font-bold text-white mb-4">Pre-Made Whistles Available</h3>
-        <p className="text-primary-100 mb-4">
-          If you can't print your own, we have pre-made whistles available for free distribution in the Roanoke area.
+        <h3 className="text-2xl font-bold text-white mb-4">Request Free Whistles</h3>
+        <p className="text-primary-100 mb-6">
+          If you cannot print your own, request free pre-made whistles. I will get back to you regarding availability and to arrange pickup or delivery.
         </p>
-        <Link 
-          href="/donate"
+        
+        <a 
+          href="mailto:icewhistleroanoke@gmail.com?subject=Ice Whistle Request&body=Name:%20%0A%0AHow many whistles do you need?%20%0A%0APickup or delivery?%20%0A%0APreferred color (if available):%20%0A%0AAdditional notes:%20"
           className="inline-block px-6 py-3 bg-primary-600 hover:bg-primary-500 text-white rounded-lg transition-colors"
         >
-          Get a Free Whistle →
-        </Link>
+          Request Whistles →
+        </a>
+        
+        <p className="text-primary-400 text-sm mt-4">
+          Note: Color choices are only available if I have that filament in stock at the time.
+        </p>
       </div>
 
       <div className="mt-8 text-center">
