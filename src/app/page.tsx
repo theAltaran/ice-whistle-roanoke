@@ -18,15 +18,21 @@ export default function Home() {
         <div className="bg-primary-900/50 rounded-2xl p-8 border border-primary-700/50 backdrop-blur-sm">
           <h2 className="text-3xl font-bold text-white mb-6 text-center">See How It Works</h2>
           <div className="flex justify-center">
-            <div className="w-full max-w-md aspect-[9/16] rounded-xl overflow-hidden shadow-2xl shadow-primary-900/50">
-              <iframe
-                className="w-full h-full"
-                src="https://www.instagram.com/reels/DRVYvFeifho/embed"
-                title="ICE Whistle Demonstration"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
+            <a 
+              href="https://www.instagram.com/reels/DRVYvFeifho/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative w-full max-w-md aspect-[9/16] rounded-xl overflow-hidden shadow-2xl shadow-primary-900/50 bg-gradient-to-br from-primary-600 to-primary-800 flex items-center justify-center hover:scale-[1.02] transition-transform"
+            >
+              <div className="text-center p-6">
+                <div className="text-6xl mb-4">▶️</div>
+                <p className="text-white font-semibold text-lg">Watch Video</p>
+                <p className="text-primary-200 text-sm mt-2">Click to open on Instagram</p>
+              </div>
+              <div className="absolute bottom-4 left-4 right-4 bg-black/50 rounded-lg p-3 text-center">
+                <p className="text-white text-sm">📹 ICE Whistle Demo</p>
+              </div>
+            </a>
           </div>
           <p className="text-center text-primary-300 mt-4">
             Video by <span className="text-primary-200 font-semibold">New York Immigration Coalition</span> on Instagram
