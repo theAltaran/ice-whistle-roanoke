@@ -1,3 +1,6 @@
+'use client'
+
+import { useState } from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -16,6 +19,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+
   return (
     <html lang="en">
       <head>
@@ -28,7 +33,9 @@ export default function RootLayout({
               <Link href="/" className="text-xl font-bold text-primary-200 hover:text-white transition-colors">
                 🧊 Ice Whistle Roanoke
               </Link>
-              <div className="flex space-x-1">
+              
+              {/* Desktop Menu */}
+              <div className="hidden md:flex space-x-1">
                 <Link 
                   href="/" 
                   className="px-4 py-2 rounded-lg text-primary-200 hover:bg-primary-800/50 hover:text-white transition-all duration-200"
@@ -48,7 +55,49 @@ export default function RootLayout({
                   Download & Print
                 </Link>
               </div>
+              
+              {/* Mobile Hamburger Button */}
+              <button 
+                className="md:hidden p-2 text-primary-200 hover:text-white"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label="Toggle menu"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {mobileMenuOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
             </div>
+            
+            {/* Mobile Menu */}
+            {mobileMenuOpen && (
+              <div className="md:hidden pb-4">
+                <Link 
+                  href="/" 
+                  className="block px-4 py-2 rounded-lg text-primary-200 hover:bg-primary-800/50 hover:text-white transition-all duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Home
+                </Link>
+                <Link 
+                  href="/donate" 
+                  className="block px-4 py-2 rounded-lg text-primary-200 hover:bg-primary-800/50 hover:text-white transition-all duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Donate
+                </Link>
+                <Link 
+                  href="/download" 
+                  className="block px-4 py-2 rounded-lg text-primary-200 hover:bg-primary-800/50 hover:text-white transition-all duration-200"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Download & Print
+                </Link>
+              </div>
+            )}
           </div>
         </nav>
         <main className="min-h-screen">
