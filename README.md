@@ -11,6 +11,7 @@ To enable the image gallery, add these environment variables in Vercel:
 | `BUNNY_STORAGE_HOSTNAME` | Bunny CDN storage hostname | `ny.storage.bunnycdn.com` |
 | `BUNNY_STORAGE_USERNAME` | Bunny CDN storage username | `your-username` |
 | `BUNNY_STORAGE_PASSWORD` | Bunny CDN storage password | `your-password` |
+| `BUNNY_PULL_ZONE_URL` | (Optional) Bunny Pull Zone URL | `roanoke-ice-whistle.b-cdn.net` |
 
 To enable the whistle request form to send emails, add these environment variables in Vercel:
 

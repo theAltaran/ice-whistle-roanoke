@@ -4,6 +4,7 @@ export async function GET() {
   const hostname = process.env.BUNNY_STORAGE_HOSTNAME
   const username = process.env.BUNNY_STORAGE_USERNAME
   const password = process.env.BUNNY_STORAGE_PASSWORD
+  const pullZoneUrl = process.env.BUNNY_PULL_ZONE_URL
 
   if (!hostname || !username || !password) {
     return NextResponse.json(
@@ -34,14 +35,15 @@ export async function GET() {
     
     // Filter for image files and construct URLs
     const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg']
+    const cdnBase = pullZoneUrl || hostname.replace('storage.bunnycdn.com', 'b-cdn.net')
     const images = data
       .filter((item: { IsDirectory: boolean; ObjectName: string }) => !item.IsDirectory)
       .filter((item: { ObjectName: string }) => 
         imageExtensions.some(ext => item.ObjectName.toLowerCase().endsWith(ext))
       )
       .map((item: { ObjectName: string }) => {
-        // Construct the Bunny CDN URL
-        return `https://${hostname}/${username}/image_gallery/${item.ObjectName}`
+        // Construct the Bunny CDN URL using Pull Zone
+        return `https://${cdnBase}/image_gallery/${item.ObjectName}`
       })
 
     return NextResponse.json({ images })
