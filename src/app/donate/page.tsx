@@ -8,26 +8,26 @@ export default function Donate() {
       </h1>
 
       <div className="bg-primary-900/50 rounded-2xl p-8 border border-primary-700/50 mb-8">
-        <p className="text-xl text-primary-100 leading-relaxed mb-6">
+        <p className="text-xl text-primary-100 leading-relaxed mb-6 text-center">
           Your donation helps us continue our work distributing free ICE whistles to community members who need them most. Every contribution makes a difference in protecting our neighbors.
         </p>
         
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$10</span>
-            <p className="text-primary-200">Helps make ~100 whistles<br/>(includes filament & electricity)</p>
+            <p className="text-primary-200">Helps make ~100 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$25</span>
-            <p className="text-primary-200">Helps make ~250 whistles<br/>(includes filament & electricity)</p>
+            <p className="text-primary-200">Helps make ~250 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$50</span>
-            <p className="text-primary-200">Helps make ~500 whistles<br/>(includes filament & electricity)</p>
+            <p className="text-primary-200">Helps make ~500 whistles</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$100</span>
-            <p className="text-primary-200">Helps make ~1,000 whistles<br/>(includes filament & electricity)</p>
+            <p className="text-primary-200">Helps make ~1,000 whistles</p>
           </div>
         </div>
       </div>
