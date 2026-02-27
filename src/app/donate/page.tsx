@@ -38,7 +38,7 @@ export default function Donate() {
           Your support helps protect immigrant families in Roanoke. Together, we turn silence into action. Solidarity forever.
         </p>
         <a 
-          href="https://www.paypal.com/donate/?hosted_button_id=JZR99LRVENVBY"
+          href="https://www.paypal.com/donate/?hosted_button_id=T99R8NSCH3GEJ"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-8 py-4 bg-primary-500 hover:bg-primary-400 text-white rounded-lg transition-colors text-lg font-semibold"
