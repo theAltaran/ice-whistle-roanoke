@@ -23,6 +23,12 @@ export default function Navbar() {
               Home
             </Link>
             <Link 
+              href="/gallery" 
+              className="px-4 py-2 rounded-lg text-primary-200 hover:bg-primary-800/50 hover:text-white transition-all duration-200"
+            >
+              Gallery
+            </Link>
+            <Link 
               href="/donate" 
               className="px-4 py-2 rounded-lg text-primary-200 hover:bg-primary-800/50 hover:text-white transition-all duration-200"
             >
@@ -65,6 +71,13 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Home
+              </Link>
+              <Link 
+                href="/gallery" 
+                className="px-4 py-2 rounded-lg text-primary-200 hover:bg-primary-800/50 hover:text-white transition-all duration-200"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Gallery
               </Link>
               <Link 
                 href="/donate" 

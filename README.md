@@ -4,6 +4,14 @@ A community website for distributing free ICE whistles in Roanoke, VA.
 
 ## Environment Variables
 
+To enable the image gallery, add these environment variables in Vercel:
+
+| Variable | Description | Example |
+|----------|-------------|---------|
+| `BUNNY_STORAGE_HOSTNAME` | Bunny CDN storage hostname | `ny.storage.bunnycdn.com` |
+| `BUNNY_STORAGE_USERNAME` | Bunny CDN storage username | `your-username` |
+| `BUNNY_STORAGE_PASSWORD` | Bunny CDN storage password | `your-password` |
+
 To enable the whistle request form to send emails, add these environment variables in Vercel:
 
 | Variable | Description | Example |
@@ -46,6 +54,7 @@ npm run dev
 ## Features
 
 - Home page with ICE whistle information and usage instructions
+- Image gallery page with carousel (images from Bunny CDN)
 - Donate page with PayPal integration
 - Download page with STL file and request form
 - Contact email on all pages
