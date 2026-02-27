@@ -15,19 +15,19 @@ export default function Donate() {
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$10</span>
-            <p className="text-primary-200">Helps make ~125 whistles</p>
+            <p className="text-primary-200">Helps make ~100 whistles<br/>(includes filament & electricity)</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$25</span>
-            <p className="text-primary-200">Helps make ~300 whistles</p>
+            <p className="text-primary-200">Helps make ~250 whistles<br/>(includes filament & electricity)</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$50</span>
-            <p className="text-primary-200">Helps make ~625 whistles</p>
+            <p className="text-primary-200">Helps make ~500 whistles<br/>(includes filament & electricity)</p>
           </div>
           <div className="bg-primary-800/40 rounded-xl p-6 border border-primary-600/30 text-center">
             <span className="text-4xl mb-4 block">$100</span>
-            <p className="text-primary-200">Helps make ~1,250 whistles</p>
+            <p className="text-primary-200">Helps make ~1,000 whistles<br/>(includes filament & electricity)</p>
           </div>
         </div>
       </div>
