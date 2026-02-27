@@ -13,20 +13,20 @@ export async function GET() {
   }
 
   try {
-    // Create Basic Auth header
-    const auth = Buffer.from(`${username}:${password}`).toString('base64')
-
-    // List files from Bunny Storage
+    // Bunny Storage API uses AccessKey header with password
+    // Endpoint format: https://{region}.storage.bunnycdn.com/{storageZoneName}/
     const response = await fetch(
-      `https://${hostname}/storage/${username}/image_gallery/`,
+      `https://${hostname}/${username}/image_gallery/`,
       {
         headers: {
-          'Authorization': `Basic ${auth}`,
+          'AccessKey': password,
         },
       }
     )
 
     if (!response.ok) {
+      const errorText = await response.text()
+      console.error('Bunny API error:', response.status, errorText)
       throw new Error(`Bunny API error: ${response.status}`)
     }
 
@@ -41,7 +41,6 @@ export async function GET() {
       )
       .map((item: { ObjectName: string }) => {
         // Construct the Bunny CDN URL
-        // Format: https://{hostname}/{username}/image_gallery/{filename}
         return `https://${hostname}/${username}/image_gallery/${item.ObjectName}`
       })
 
